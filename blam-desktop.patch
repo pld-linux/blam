@@ -1,0 +1,12 @@
+diff -urN blam-1.6.0.orig/blam.desktop.in blam-1.6.0/blam.desktop.in
+--- blam-1.6.0.orig/blam.desktop.in	2004-11-22 21:48:11.820907072 +0100
++++ blam-1.6.0/blam.desktop.in	2004-11-22 21:48:56.671088808 +0100
+@@ -8,7 +8,7 @@
+ StartupNotify=true
+ Terminal=false
+ Type=Application
+-Categories=Application;Network;
++Categories=GTK;GNOME;Network;News;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=blam
+ X-GNOME-Bugzilla-Component=General
