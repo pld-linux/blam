@@ -1,0 +1,15 @@
+diff -urN aa/blam-1.6.0/libblam/Makefile.am blam-1.6.0/libblam/Makefile.am
+--- aa/blam-1.6.0/libblam/Makefile.am	2004-10-21 19:17:37.000000000 +0200
++++ blam-1.6.0/libblam/Makefile.am	2004-11-01 19:24:25.755489048 +0100
+@@ -6,9 +6,11 @@
+ 	-I$(MOZILLA_INCLUDE_ROOT)/dom                     \
+ 	-I$(MOZILLA_INCLUDE_ROOT)/find                    \
+ 	-I$(MOZILLA_INCLUDE_ROOT)/locale		\
++	-I$(MOZILLA_INCLUDE_ROOT)/necko		\
+ 	-I$(MOZILLA_INCLUDE_ROOT)/webbrwsr		  \
+ 	-I$(MOZILLA_INCLUDE_ROOT)/string		  \
+ 	-I$(MOZILLA_INCLUDE_ROOT)/pref                    \
++	-I$(MOZILLA_INCLUDE_ROOT)/windowwatcher		\
+ 	-I$(MOZILLA_INCLUDE_ROOT)/gfx                     \
+ 	-DALLOW_PRIVATE_API                               \
+         -DMOZILLA_HOME=\""$(MOZILLA_HOME)\""              \

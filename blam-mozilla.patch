@@ -1,0 +1,12 @@
+diff -urN aa/blam-1.6.0/configure.in blam-1.6.0/configure.in
+--- aa/blam-1.6.0/configure.in	2004-10-23 15:12:46.000000000 +0200
++++ blam-1.6.0/configure.in	2004-11-01 19:44:12.709044680 +0100
+@@ -107,7 +107,7 @@
+ MOZILLA_INCLUDE_ROOT="`$PKG_CONFIG --variable=includedir $MOZILLA-gtkmozembed`"
+ AC_SUBST(MOZILLA_INCLUDE_ROOT)
+ 
+-MOZILLA_HOME="`$PKG_CONFIG --variable=libdir $MOZILLA-gtkmozembed`"
++MOZILLA_HOME="`$PKG_CONFIG --variable=libdir $MOZILLA-plugin`"
+ AC_SUBST(MOZILLA_HOME)
+ 
+ MOZILLA_PREFIX="`$PKG_CONFIG --variable=prefix $MOZILLA-gtkmozembed`"
