@@ -25,6 +25,7 @@ Requires:	dotnet-gtk-sharp
 Requires:	mono
 Requires:	monodoc
 Requires:	mozilla-embedded
+ExcludeArch:	alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
