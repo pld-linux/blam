@@ -18,7 +18,6 @@ BuildRequires:	intltool >= 0.25
 BuildRequires:	libgnomeui-devel >= 2.2.0
 BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.0
-BuildRequires:	mono-devel >= 1.0
 BuildRequires:	pkgconfig
 Requires(post):	GConf2 >= 2.4.0
 Requires:	dotnet-gecko-sharp
