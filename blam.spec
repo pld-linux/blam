@@ -1,12 +1,12 @@
 Summary:	.NET RSS Reader
 Summary(pl):	Program do pobierania informacji w formacie RSS
 Name:		blam
-Version:	1.2.4
+Version:	1.4.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.imendio.com/pub/imendio/blam/%{name}-%{version}.tar.gz
-# Source0-md5:	9bda2cb7db94801e07f023b88dd4b0f4
+Source0:	http://ftp.imendio.com/pub/imendio/blam/src/%{name}-%{version}.tar.gz
+# Source0-md5:	9954bd96a9082fd20e9664cdeb5c692b
 Patch0:		%{name}-locale-names.patch
 URL:		http://micke.hallendal.net/
 BuildRequires:	GConf2-devel >= 2.4.0
