@@ -13,7 +13,7 @@ Patch2:		%{name}-desktop.patch
 URL:		http://micke.hallendal.net/
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
-BuildRequires:	automake >= 1.7
+BuildRequires:	automake >= 1:1.7
 BuildRequires:	dotnet-gecko-sharp-devel >= 0.6
 BuildRequires:	dotnet-gtk-sharp-devel >= 1.0
 BuildRequires:	intltool >= 0.25
