@@ -1,0 +1,12 @@
+diff -urN aa/blam-1.2.1/configure.in blam-1.2.1/configure.in
+--- aa/blam-1.2.1/configure.in	2004-08-04 10:17:10.000000000 +0200
++++ blam-1.2.1/configure.in	2004-08-04 19:14:57.614341512 +0200
+@@ -66,7 +66,7 @@
+ AC_SUBST(LIBBLAM_LIBS)
+ 
+ dnl Intl
+-ALL_LINGUAS="ca cs de el en_CA en_GB es fr ga he hr nl no pa pt_BR pt sq sr@Latn sr sv tr uk zh_CN"
++ALL_LINGUAS="ca cs de el en_CA en_GB es fr ga he hr nb nl pa pt_BR pt sq sr@Latn sr sv tr uk zh_CN"
+ GETTEXT_PACKAGE=blam
+ AC_SUBST(GETTEXT_PACKAGE)
+ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
