@@ -1,6 +1,6 @@
-diff -urN blam-1.6.0.orig/blam.desktop.in blam-1.6.0/blam.desktop.in
---- blam-1.6.0.orig/blam.desktop.in	2004-11-22 21:48:11.820907072 +0100
-+++ blam-1.6.0/blam.desktop.in	2004-11-22 21:48:56.671088808 +0100
+diff -urN blam-1.6.1.orig/blam.desktop.in.in blam-1.6.1/blam.desktop.in.in
+--- blam-1.6.1.orig/blam.desktop.in.in	2005-01-09 13:50:57.971683568 +0100
++++ blam-1.6.1/blam.desktop.in.in	2005-01-09 13:51:23.364823224 +0100
 @@ -8,7 +8,7 @@
  StartupNotify=true
  Terminal=false
