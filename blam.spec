@@ -5,7 +5,7 @@ Version:	1.2.1
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.imendio.com/pub/imendio/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://ftp.imendio.com/pub/imendio/blam/%{name}-%{version}.tar.gz
 # Source0-md5:	3143c4408d2f60e89224ee35ffa7bab6
 Patch0:		%{name}-locale-names.patch
 URL:		http://micke.hallendal.net/
