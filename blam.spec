@@ -22,14 +22,15 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.0
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.197
+BuildRequires:	rpmbuild(macros) >= 1.213
 Requires(post,preun):	GConf2 >= 2.4.0
 Requires:	dotnet-gecko-sharp
 Requires:	dotnet-gtk-sharp
 Requires:	mono
 Requires:	monodoc
 Requires:	mozilla-embedded
-ExcludeArch:	alpha amd64
+# TODO: recheck alpha
+ExcludeArch:	%{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
