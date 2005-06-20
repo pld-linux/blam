@@ -16,6 +16,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.7
 BuildRequires:	dotnet-gecko-sharp-devel >= 0.6
 BuildRequires:	dotnet-gtk-sharp-devel >= 1.0
+BuildRequires:	dotnet-gtk-sharp-gnome-devel >= 1.0
 BuildRequires:	intltool >= 0.25
 BuildRequires:	libgnomeui-devel >= 2.2.0
 BuildRequires:	libstdc++-devel
