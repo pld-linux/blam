@@ -1,8 +1,9 @@
+%include	 /usr/lib/rpm/macros.mono
 Summary:	.NET RSS Reader
 Summary(pl):	Program do pobierania informacji w formacie RSS
 Name:		blam
 Version:	1.8.2
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.imendio.com/pub/imendio/blam/src/%{name}-%{version}.tar.gz
@@ -25,13 +26,8 @@ BuildRequires:	mono-csharp >= 1.1.4
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.213
 Requires(post,preun):	GConf2 >= 2.4.0
-Requires:	dotnet-gecko-sharp
-Requires:	dotnet-gtk-sharp
-Requires:	mono
-Requires:	monodoc
 Requires:	mozilla-embedded
-# TODO: recheck alpha
-ExcludeArch:	%{x8664}
+ExcludeArch:	alpha i386 sparc sparc64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
