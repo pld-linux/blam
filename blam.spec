@@ -11,6 +11,7 @@ Source0:	http://ftp.imendio.com/pub/imendio/blam/src/%{name}-%{version}.tar.gz
 Patch0:		%{name}-mozilla.patch
 Patch1:		%{name}-mozilla_includes.patch
 Patch2:		%{name}-desktop.patch
+Patch3:		%{name}-install.patch
 URL:		http://micke.hallendal.net/
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
@@ -42,6 +43,7 @@ Program do pobierania informacji w formacie RSS wykonany w technologii
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 rm -rf autom4te.cache
@@ -51,7 +53,8 @@ rm -rf autom4te.cache
 %{__automake}
 %{__autoconf}
 %configure \
-	--disable-schemas-install
+	--disable-schemas-install \
+	--disable-static
 %{__make}
 
 %install
@@ -62,27 +65,30 @@ rm -rf $RPM_BUILD_ROOT
 
 %find_lang %{name}
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/%{name}/*.{a,la}
+rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post
+/sbin/ldconfig
 %gconf_schema_install blam.schemas
 
 %preun
 %gconf_schema_uninstall blam.schemas
 
+%postun -p /sbin/ldconfig
+
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%{_sysconfdir}/gconf/schemas/*
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/%{name}
-%attr(755,root,root) %{_libdir}/%{name}/libblam.so*
-%attr(755,root,root) %{_libdir}/%{name}/*.exe
-%{_libdir}/%{name}/blam.exe.config
-%{_libdir}/%{name}/*.dll
+%attr(755,root,root) %{_libdir}/libblam.so*
+%attr(755,root,root) %{_prefix}/lib/%{name}/*.exe
+%{_prefix}/lib/%{name}/blam.exe.config
+%{_prefix}/lib/%{name}/*.dll
 %{_datadir}/%{name}
 %{_desktopdir}/*
 %{_pixmapsdir}/*
+%{_sysconfdir}/gconf/schemas/blam.schemas
