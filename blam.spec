@@ -83,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
-%dir %{_libdir}/%{name}
+%dir %{_prefix}/lib/%{name}
 %attr(755,root,root) %{_libdir}/libblam.so*
 %attr(755,root,root) %{_prefix}/lib/%{name}/*.exe
 %{_prefix}/lib/%{name}/blam.exe.config
