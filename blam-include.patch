@@ -1,0 +1,14 @@
+diff -urN aaa/blam-1.8.2/libblam/blam-gecko-utils.cpp blam-1.8.2/libblam/blam-gecko-utils.cpp
+--- aaa/blam-1.8.2/libblam/blam-gecko-utils.cpp	2005-05-06 10:07:49.000000000 +0200
++++ blam-1.8.2/libblam/blam-gecko-utils.cpp	2006-08-14 22:13:24.707455250 +0200
+@@ -26,8 +26,10 @@
+ 
+ #include <stdlib.h>
+ 
++#include <nsCOMPtr.h>
+ #include <nsEmbedString.h>
+ #include <nsIPrefService.h>
++#include <nsServiceManagerUtils.h>
+ #include <nsIServiceManager.h>
+ 
+ #if defined (HAVE_CHROME_NSICHROMEREGISTRYSEA_H)
