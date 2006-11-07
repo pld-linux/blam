@@ -1,0 +1,1 @@
+- fixed %files, added install patch, run ldconfig in post/postun
