@@ -1,0 +1,4 @@
+- updated to 1.6.0
+- removed outdated locale-names patch
+- added mozilla and mozilla_includes patches (buildfxes)
+- remove no locale in %install
