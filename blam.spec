@@ -109,6 +109,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/lib/%{name}/blam.exe.config
 %{_prefix}/lib/%{name}/*.dll
 %{_datadir}/%{name}
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
 %{_sysconfdir}/gconf/schemas/blam.schemas
