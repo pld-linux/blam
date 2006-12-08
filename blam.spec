@@ -40,7 +40,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.213
 Requires(post,preun):	GConf2 >= 2.4.0
 %if %{with mozilla_firefox}
-%requires_eq	mozilla-firefox
+%requires_eq	mozilla-firefox-libs
 %else
 Requires:	mozilla-embedded = %(rpm -q --qf '%{EPOCH}:%{VERSION}' --whatprovides mozilla-embedded)
 %endif
