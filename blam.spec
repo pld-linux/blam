@@ -3,7 +3,7 @@ Summary:	.NET RSS Reader
 Summary(pl):	Program do pobierania informacji w formacie RSS
 Name:		blam
 Version:	1.8.2
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.imendio.com/pub/imendio/blam/src/%{name}-%{version}.tar.gz
@@ -12,6 +12,7 @@ Patch0:		%{name}-mozilla.patch
 Patch1:		%{name}-mozilla_includes.patch
 Patch2:		%{name}-desktop.patch
 Patch3:		%{name}-install.patch
+Patch4:		%{name}-include.patch
 URL:		http://micke.hallendal.net/
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
@@ -26,8 +27,9 @@ BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.4
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.213
+BuildRequires:	xulrunner-devel >= 1.8.0.4
 Requires(post,preun):	GConf2 >= 2.4.0
-Requires:	mozilla-embedded
+%requires_eq	xulrunner
 ExcludeArch:	alpha i386 sparc sparc64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,6 +46,7 @@ Program do pobierania informacji w formacie RSS wykonany w technologii
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 rm -rf autom4te.cache
