@@ -1,8 +1,4 @@
 #
-# Conditional build:
-%bcond_without	mozilla_firefox	# build with mozilla-devel instead of
-				# mozilla-firefox-devel
-#
 %include	 /usr/lib/rpm/macros.mono
 Summary:	.NET RSS Reader
 Summary(pl):	Program do pobierania informacji w formacie RSS
@@ -31,19 +27,11 @@ BuildRequires:	libgnomeui-devel >= 2.15.91
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.4
-%if %{with mozilla_firefox}
-BuildRequires:	mozilla-firefox-devel
-%else
-BuildRequires:	mozilla-devel
-%endif
+BuildRequires:	xulrunner-devel
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.213
 Requires(post,preun):	GConf2 >= 2.4.0
-%if %{with mozilla_firefox}
-%requires_eq	mozilla-firefox-libs
-%else
-Requires:	mozilla-embedded = %(rpm -q --qf '%{EPOCH}:%{VERSION}' --whatprovides mozilla-embedded)
-%endif
+%requires_eq	xulrunner
 ExcludeArch:	alpha i386 sparc sparc64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
