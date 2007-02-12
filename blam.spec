@@ -1,7 +1,7 @@
 #
 %include	 /usr/lib/rpm/macros.mono
 Summary:	.NET RSS Reader
-Summary(pl.UTF-8):   Program do pobierania informacji w formacie RSS
+Summary(pl.UTF-8):	Program do pobierania informacji w formacie RSS
 Name:		blam
 Version:	1.8.2
 Release:	3.1
