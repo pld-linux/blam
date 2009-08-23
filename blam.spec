@@ -3,18 +3,18 @@
 Summary:	.NET RSS Reader
 Summary(pl.UTF-8):	Program do pobierania informacji w formacie RSS
 Name:		blam
-Version:	1.8.2
-Release:	3.1
+Version:	1.8.7
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.imendio.com/pub/imendio/blam/src/%{name}-%{version}.tar.gz
-# Source0-md5:	8cb05faedf60d895d94a5ecf9d10eb8f
-Patch0:		%{name}-mozilla.patch
-Patch1:		%{name}-mozilla_includes.patch
+Source0:	http://www.cmartin.tk/blam/%{name}-%{version}.tar.bz2
+# Source0-md5:	ecb4af421c93ae8e58087de4b00e6b35
+#Patch0: %{name}-mozilla.patch
+#Patch1: %{name}-mozilla_includes.patch
 Patch2:		%{name}-desktop.patch
-Patch3:		%{name}-install.patch
-Patch4:		%{name}-dotnet2.patch
-Patch5:		%{name}-include.patch
+#Patch3: %{name}-install.patch
+#Patch4: %{name}-dotnet2.patch
+#Patch5: %{name}-include.patch
 URL:		http://micke.hallendal.net/
 BuildRequires:	GConf2-devel >= 2.14.0
 BuildRequires:	autoconf
@@ -27,9 +27,9 @@ BuildRequires:	libgnomeui-devel >= 2.15.91
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.4
-BuildRequires:	xulrunner-devel
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.213
+BuildRequires:	xulrunner-devel
 Requires(post,preun):	GConf2 >= 2.4.0
 %requires_eq	xulrunner
 ExcludeArch:	alpha i386 sparc sparc64
@@ -44,18 +44,17 @@ Program do pobierania informacji w formacie RSS wykonany w technologii
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+#%patch0 -p1
+#%patch1 -p1
 %patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
+#%patch3 -p1
+#%patch4 -p1
+#%patch5 -p1
 
 %build
 rm -rf autom4te.cache
 %{__libtoolize}
 %{__aclocal}
-%{__autoheader}
 %{__automake}
 %{__autoconf}
 %configure \
@@ -68,8 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 
 %find_lang %{name}
 
@@ -92,11 +89,16 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %dir %{_prefix}/lib/%{name}
-%attr(755,root,root) %{_libdir}/libblam.so*
 %attr(755,root,root) %{_prefix}/lib/%{name}/*.exe
 %{_prefix}/lib/%{name}/blam.exe.config
 %{_prefix}/lib/%{name}/*.dll
 %{_datadir}/%{name}
 %{_desktopdir}/*.desktop
-%{_pixmapsdir}/*
 %{_sysconfdir}/gconf/schemas/blam.schemas
+%{_iconsdir}/hicolor/16x16/apps/blam.png
+%{_iconsdir}/hicolor/22x22/apps/blam.png
+%{_iconsdir}/hicolor/24x24/apps/blam.png
+%{_iconsdir}/hicolor/32x32/apps/blam.png
+%{_iconsdir}/hicolor/48x48/apps/blam.png
+%{_iconsdir}/hicolor/scalable/apps/blam.svg
+%{_mandir}/man1/blam.1*
