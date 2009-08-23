@@ -9,12 +9,7 @@ License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.cmartin.tk/blam/%{name}-%{version}.tar.bz2
 # Source0-md5:	ecb4af421c93ae8e58087de4b00e6b35
-#Patch0: %{name}-mozilla.patch
-#Patch1: %{name}-mozilla_includes.patch
-Patch2:		%{name}-desktop.patch
-#Patch3: %{name}-install.patch
-#Patch4: %{name}-dotnet2.patch
-#Patch5: %{name}-include.patch
+Patch0:		%{name}-desktop.patch
 URL:		http://micke.hallendal.net/
 BuildRequires:	GConf2-devel >= 2.14.0
 BuildRequires:	autoconf
@@ -44,12 +39,7 @@ Program do pobierania informacji w formacie RSS wykonany w technologii
 
 %prep
 %setup -q
-#%patch0 -p1
-#%patch1 -p1
-%patch2 -p1
-#%patch3 -p1
-#%patch4 -p1
-#%patch5 -p1
+%patch0 -p1
 
 %build
 rm -rf autom4te.cache
