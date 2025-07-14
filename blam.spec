@@ -38,7 +38,7 @@ Program do pobierania informacji w formacie RSS wykonany w technologii
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 rm -rf autom4te.cache
